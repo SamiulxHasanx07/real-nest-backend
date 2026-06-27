@@ -6,7 +6,10 @@ router.get("/health", (req, res) => {
   res.status(200).json({ success: true, message: "Server is healthy!" });
 });
 
-// Import and attach other route modules here later
-// e.g., router.use("/auth", authRoutes);
+// Import routes
+import authRoutes from "./auth.route";
+
+// Mount routes
+router.use("/auth", authRoutes);
 
 export default router;
