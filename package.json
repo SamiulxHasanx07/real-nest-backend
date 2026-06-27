@@ -1,13 +1,24 @@
 {
-  "name": "Real Nest",
+  "name": "real-nest-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend API for Real Nest - Real Estate Management System",
+  "main": "dist/server.js",
   "scripts": {
+    "dev": "nodemon --watch src --ext ts,json --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "real-estate",
+    "backend",
+    "api",
+    "express",
+    "prisma"
+  ],
+  "author": "Samiul Hasan (SAM)",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
